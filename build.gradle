@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+    id 'war'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/org.jboss.weld.servlet/weld-servlet-core
+    implementation group: 'org.jboss.weld.servlet', name: 'weld-servlet-core', version: '5.0.0.SP1'
+    //  creae el servlet
+    compileOnly group: 'jakarta.servlet', name: 'jakarta.servlet-api', version: '5.0.0'
+}
+
+test {
+    useJUnitPlatform()
+}
+
